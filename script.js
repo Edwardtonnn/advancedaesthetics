@@ -66,6 +66,7 @@ proNavItem.forEach(link =>{
      let procedureBg = document.querySelector('.container-procedure-content');
      let procedureTitle = document.getElementById('text-procedure-title');
      let procedureContent = document.getElementById('text-prodecure-content');
+     let procedureLinkInnterText = document.getElementById('text-procedure-inner-text');
      let procedureLink = document.getElementById('text-procedure-link');
      let selectedProcedure = link.getAttribute('data-procedure');
      
@@ -75,6 +76,7 @@ proNavItem.forEach(link =>{
          procedureContent.textContent = procedures[selectedProcedure].content;
          procedureLink.setAttribute('href', procedures[selectedProcedure].link);
          procedureBg.style.backgroundImage = `url(${procedures[selectedProcedure].background})`;
+         procedureLinkInnterText.textContent = procedures[selectedProcedure].title;
          
      }  
     })
